@@ -21,6 +21,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
 import javafx.stage.FileChooser;
 import javafx.stage.Window;
+import javafx.scene.control.MenuItem;
 
 public class PrimaryController {
     protected int timesFlipped; // počet otočení obrázku
@@ -35,6 +36,8 @@ public class PrimaryController {
     private Image modifiedImage;
     @FXML
     private Button imageFileButton;
+    @FXML
+    private MenuItem exitButton;
 
     @FXML
     protected void originalImage() {
@@ -75,6 +78,7 @@ public class PrimaryController {
             modifiedImage = loadedImage;
             imgView.setImage(loadedImage);
         }
+        exitButton.setDisable(false);
     }
 
     @FXML
@@ -239,7 +243,7 @@ public class PrimaryController {
         Alert alert = new Alert(Alert.AlertType.NONE);
         alert.setHeaderText("About us");
         alert.setContentText(
-                "The Team:\n\n\tMichaelCZE\t\tTeam lead\n\tVenca1450\t\tLead programmer\n\tNiksld\t\tUI/UX designer\n\tGrimReapTM\tDocumentation, programmer");
+                "The Team:\n\n\tMichaelCZE\t\tTeam lead\n\tVenca1450\t\tLead programmer\n\tNiksld\t\t\tUI/UX designer\n\tGrimReapTM\t\tDocumentation, programmer");
         alert.getButtonTypes().setAll(ButtonType.OK);
         return alert.showAndWait();
     }

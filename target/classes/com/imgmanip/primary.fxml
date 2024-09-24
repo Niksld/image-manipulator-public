@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
@@ -43,7 +44,7 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#pickImage" text="Open" />
                   <MenuItem mnemonicParsing="false" onAction="#saveImage" text="Save" />
-                  <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                  <MenuItem fx:id="exitButton" disable="true" mnemonicParsing="false" onAction="#exit" text="Exit" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Filters">
@@ -56,7 +57,7 @@
             </Menu>
           <Menu mnemonicParsing="false" text="About">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" onAction="#showAboutDialog"/>
+              <MenuItem mnemonicParsing="false" onAction="#showAboutDialog" text="About" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Exit">
